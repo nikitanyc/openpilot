@@ -168,12 +168,20 @@ class CarInterface(CarInterfaceBase):
         # modified filter output values:  0x009F, 0x0108, 0x0108, 0x0108, 0x0108, 0x0108, 0x0108, 0x0400, 0x0480
         # note: max request allowed is 4096, but request is capped at 3840 in firmware, so modifications result in 2x max
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560, 8000], [0, 2560, 3840]]
+<<<<<<< HEAD
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3], [0.1]]
       else:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560], [0, 2560]]
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[1.1], [0.33]]
+=======
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[1.1, 0.3], [0.33, 0.1]]
+        ret.lateralTuning.pid.kf = 0.00004 # for less wobble
+      else:
+        ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560], [0, 2560]]
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[1.1], [0.33]]
+        ret.lateralTuning.pid.kf = 0.00006 # conservative feed-forward
+>>>>>>> bbf23b8d... add dualpid for civics & crv
       tire_stiffness_factor = 1.
-
       ret.longitudinalTuning.kpBP = [0., 5., 35.]
       ret.longitudinalTuning.kpV = [3.6, 2.4, 1.5]
       ret.longitudinalTuning.kiBP = [0., 35.]
@@ -187,10 +195,19 @@ class CarInterface(CarInterfaceBase):
       ret.steerRatio = 15.38  # 10.93 is end-to-end spec
       if eps_modified:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2566, 8000], [0, 2566, 3840]] 
+<<<<<<< HEAD
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.4], [0.12]] # 2.5 X
       else:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 4096], [0, 4096]]
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.8], [0.24]]
+=======
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[1.05, 0.3], [0.32, 0.1]]
+        ret.lateralTuning.pid.kf = 0.00004 # for less wobble
+      else:
+        ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2566, 2816], [0, 2566, 3840]]
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[1.05], [0.32]]
+        ret.lateralTuning.pid.kf = 0.00006 # conservative feed-forward
+>>>>>>> bbf23b8d... add dualpid for civics & crv
       tire_stiffness_factor = 1.
       ret.longitudinalTuning.kpBP = [0., 5., 35.]
       ret.longitudinalTuning.kpV = [1.2, 0.8, 0.5]
@@ -257,11 +274,21 @@ class CarInterface(CarInterfaceBase):
         # stock request output values:    0x0000, 0x0500, 0x0A15, 0x0E6D, 0x1100, 0x1200, 0x129A, 0x134D, 0x1400
         # modified request output values: 0x0000, 0x0500, 0x0A15, 0x0E6D, 0x1100, 0x1200, 0x1ACD, 0x239A, 0x2800
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560, 10000], [0, 2560, 3840]]
+<<<<<<< HEAD
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3], [0.1]]
       else:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 3840], [0, 3840]]
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.64], [0.192]]
       tire_stiffness_factor = 0.677
+=======
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.64, 0.3], [0.192, 0.1]]
+        ret.lateralTuning.pid.kf = 0.00004 # for less wobble
+      else:
+        ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 3840], [0, 3840]]
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.64], [0.192]]
+        ret.lateralTuning.pid.kf = 0.00006 # conservative feed-forward
+      tire_stiffness_factor = 0.67
+>>>>>>> bbf23b8d... add dualpid for civics & crv
       ret.longitudinalTuning.kpBP = [0., 5., 35.]
       ret.longitudinalTuning.kpV = [1.2, 0.8, 0.5]
       ret.longitudinalTuning.kiBP = [0., 35.]
