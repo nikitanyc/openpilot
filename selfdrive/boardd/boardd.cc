@@ -38,9 +38,9 @@
 #define VOLTAGE_K 0.091  // LPF gain for 5s tau (dt/tau / (dt/tau + 1))
 
 #ifdef QCOM
-const uint32_t NO_IGNITION_CNT_MAX = 2 * 60 * 60 * 30;  // turn off charge after 30 hrs
-const float VBATT_START_CHARGING = 11.5;
-const float VBATT_PAUSE_CHARGING = 11.0;
+const uint32_t NO_IGNITION_CNT_MAX = 2 * 60 * 60 * 2.0;  // turn off charge after 2 hrs
+const float VBATT_START_CHARGING = 11.7;
+const float VBATT_PAUSE_CHARGING = 11.2;
 #endif
 
 namespace {
