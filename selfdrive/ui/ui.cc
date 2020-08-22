@@ -16,7 +16,6 @@
 #include "common/params.h"
 #include "common/utilpp.h"
 #include "ui.hpp"
-#include "dashcam.h"
 
 static void ui_set_brightness(UIState *s, int brightness) {
   static int last_brightness = -1;
