@@ -465,10 +465,12 @@ FW_VERSIONS = {
     (Ecu.eps, 0x18da30f1, None): [
       b'39990-TBA-C020\x00\x00',
       b'39990-TBA-C120\x00\x00',
+      b'39990-TBA,C120\x00\x00',
       b'39990-TEZ-T020\x00\x00',
       b'39990-TGG-A020\x00\x00',
       b'39990-TGG,A020\x00\x00',
       b'39990-TGG-A120\x00\x00',
+      b'39990-TGG,A120\x00\x00',
       b'39990-TGL-E130\x00\x00',
     ],
     (Ecu.srs, 0x18da53f1, None): [
