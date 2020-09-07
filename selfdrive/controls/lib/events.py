@@ -238,7 +238,7 @@ EVENTS = {
   EventName.startupMaster: {
     ET.PERMANENT: Alert(
       "This branch is not tested",
-      "Always keep hands on wheel and eyes on road",
+      "Fork by Nick",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
   },
@@ -362,7 +362,7 @@ EVENTS = {
 
   EventName.preDriverDistracted: {
     ET.WARNING: Alert(
-      "Driver is distracted",
+      "Driver appears to be distracted",
       "",
       AlertStatus.normal, AlertSize.small,
       Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, .0, .1, .1, alert_rate=0.75),
@@ -370,7 +370,7 @@ EVENTS = {
 
   EventName.promptDriverDistracted: {
     ET.WARNING: Alert(
-      "KEEP EYES ON ROAD",
+      "Please keep eyes on road",
       "Driver Appears Distracted",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.MID, VisualAlert.steerRequired, AudibleAlert.chimeWarning2Repeat, .1, .1, .1),
@@ -411,7 +411,7 @@ EVENTS = {
   EventName.driverMonitorLowAcc: {
     ET.WARNING: Alert(
       "CHECK DRIVER FACE VISIBILITY",
-      "Driver Monitor Model Output Uncertain",
+      "Driver Monitor Model Output is Uncertain",
       AlertStatus.normal, AlertSize.mid,
       Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, .4, 0., 1.),
   },
@@ -439,7 +439,7 @@ EVENTS = {
   EventName.preLaneChangeLeft: {
     ET.WARNING: Alert(
       "Steer Left to Start Lane Change",
-      "Monitor Other Vehicles",
+      "Monitor Left Blind Spot",
       AlertStatus.normal, AlertSize.mid,
       Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, .0, .1, .1, alert_rate=0.75),
   },
@@ -447,7 +447,7 @@ EVENTS = {
   EventName.preLaneChangeRight: {
     ET.WARNING: Alert(
       "Steer Right to Start Lane Change",
-      "Monitor Other Vehicles",
+      "Monitor Right Bling Spot",
       AlertStatus.normal, AlertSize.mid,
       Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, .0, .1, .1, alert_rate=0.75),
   },
@@ -470,7 +470,7 @@ EVENTS = {
 
   EventName.steerSaturated: {
     ET.WARNING: Alert(
-      "TAKE CONTROL",
+      "Potential Oversteer Incursion",
       "Turn Exceeds Steering Limit",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimePrompt, 1., 2., 3.),
@@ -588,7 +588,7 @@ EVENTS = {
   },
 
   EventName.wrongGear: {
-    ET.SOFT_DISABLE: SoftDisableAlert("Gear not D"),
+    ET.SOFT_DISABLE: SoftDisableAlert("Go to Drive Gear"),
     ET.NO_ENTRY: NoEntryAlert("Gear not D"),
   },
 
