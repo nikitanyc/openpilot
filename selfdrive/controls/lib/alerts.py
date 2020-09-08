@@ -92,21 +92,21 @@ ALERTS = [
       "TAKE CONTROL",
       "Turn Exceeds Steering Limit",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, 1., 2., 3.),
+      Priority.LOWER, VisualAlert.none, AudibleAlert.none, 1., 2., 3.),
 
   Alert(
       "steerTempUnavailable",
       "TAKE CONTROL",
       "Steering Temporarily Unavailable",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimeWarning1, .4, 2., 3.),
+      Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
 
   Alert(
       "steerTempUnavailableMute",
       "TAKE CONTROL",
       "Steering Temporarily Unavailable",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, .2, .2, .2),
+      Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
 
   Alert(
       "manualSteeringRequired",
@@ -187,7 +187,7 @@ ALERTS = [
 
   Alert(
       "startupMaster",
-      "WARNING: This branch is not tested",
+      "Untested fork by Nick",
       "Always keep hands on wheel and eyes on road",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
