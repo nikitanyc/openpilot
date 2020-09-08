@@ -143,7 +143,7 @@ class kegman_conf():
                      "3barBP1":"3.0", "1barMax":"2.1", "2barMax":"2.1", "3barMax":"2.1", \
                      "1barHwy":"0.4", "2barHwy":"0.3", "3barHwy":"0.1", \
                      "steerRatio":"-1", "steerRateCost":"-1", "slowOnCurves":"1", "Kf":"-1", \
-                     "sR_boost":"0", "sR_BP0":"04.0", "sR_BP1":"0", "sR_time":"1", \
+                     "sR_boost":"0", "sR_BP0":"0", "sR_BP1":"0", "sR_time":"1", \
                      "ALCnudgeLess":"1", "ALCminSpeed":"20.1168", "ALCtimer":"2.0", "CruiseDelta":"8", \
                      "CruiseEnableMin":"40", "epsModded": "0"}
 
