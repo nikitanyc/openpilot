@@ -89,7 +89,7 @@ ALERTS = [
 
   Alert(
       "steerSaturated",
-      "TAKE CONTROL",
+      "Sharp Turn Ahead",
       "Turn Exceeds Steering Limit",
       AlertStatus.normal, AlertSize.small,
       Priority.LOW, VisualAlert.none, AudibleAlert.none, 1., 2., 3.),
@@ -127,7 +127,7 @@ ALERTS = [
       "KEEP EYES ON ROAD: Driver Distracted",
       "",
       AlertStatus.normal, AlertSize.small,
-      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, .0, .1, .1, alert_rate=0.75),
+      Priority.LOW, VisualAlert.none, AudibleAlert.none, .0, .1, .1, alert_rate=0.75),
 
   Alert(
       "promptDriverDistracted",
@@ -141,7 +141,7 @@ ALERTS = [
       "DISENGAGE IMMEDIATELY",
       "Driver Was Distracted",
       AlertStatus.critical, AlertSize.full,
-      Priority.HIGH, VisualAlert.steerRequired, AudibleAlert.chimeWarningRepeat, .1, .1, .1),
+      Priority.HIGH, VisualAlert.steerRequired, AudibleAlert.chimeWarning2, .1, .1, .1),
 
   Alert(
       "preDriverUnresponsive",
@@ -169,7 +169,7 @@ ALERTS = [
       "CHECK DRIVER FACE VISIBILITY",
       "Driver Monitor Model Output Uncertain",
       AlertStatus.normal, AlertSize.mid,
-      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.none, .4, 0., 1.),
+      Priority.LOW, VisualAlert.none, AudibleAlert.none, .4, 0., 1.),
 
   Alert(
       "geofence",
@@ -180,15 +180,15 @@ ALERTS = [
 
   Alert(
       "startup",
-      "Be ready to take over at any time",
+      "KEGMAN-NIKITA FORK 2.0",
       "Always keep hands on wheel and eyes on road",
       AlertStatus.normal, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
 
   Alert(
       "startupMaster",
-      "WARNING: This branch is not tested",
-      "Always keep hands on wheel and eyes on road",
+      "KEGMAN-NIKITA FORK 2.0",
+      "Untested - Keep Eyes On Road",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
 
