@@ -221,7 +221,7 @@ EVENTS = {
 
   EventName.startup: {
     ET.PERMANENT: Alert(
-      "Be ready to take over at any time",
+      "CFRAN FORK NICK",
       "Always keep hands on wheel and eyes on road",
       AlertStatus.normal, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
@@ -237,7 +237,7 @@ EVENTS = {
 
   EventName.startupMaster: {
     ET.PERMANENT: Alert(
-      "Be ready to take over at any time",
+      "CFRAN FORK NICK",
       "Always keep hands on wheel and eyes on road",
       AlertStatus.userPrompt, AlertSize.mid,
       Priority.LOWER, VisualAlert.none, AudibleAlert.none, 0., 0., 15.),
@@ -328,10 +328,10 @@ EVENTS = {
 
   EventName.ldw: {
     ET.PERMANENT: Alert(
-      "TAKE CONTROL",
+      "Potential Lane Departure",
       "Lane Departure Detected",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimePrompt, 1., 2., 3.),
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, .0, .0, .1),
   },
 
   # ********** events only containing alerts that display while engaged **********
@@ -373,7 +373,7 @@ EVENTS = {
       "KEEP EYES ON ROAD",
       "Driver Appears Distracted",
       AlertStatus.userPrompt, AlertSize.mid,
-      Priority.MID, VisualAlert.steerRequired, AudibleAlert.chimeWarning2Repeat, .1, .1, .1),
+      Priority.LOWEST, VisualAlert.none, AudibleAlert.none, .0, .0, .1),
   },
 
   EventName.driverDistracted: {
