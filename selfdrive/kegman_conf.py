@@ -110,7 +110,7 @@ class kegman_conf():
         self.element_updated = True
 
       if "ALCnudgeLess" not in self.config:
-        self.config.update({"ALCnudgeLess":"0"})
+        self.config.update({"ALCnudgeLess":"1"})
         self.config.update({"ALCminSpeed":"20.1168"})
         self.element_updated = True
 
@@ -140,7 +140,7 @@ class kegman_conf():
 
     else:
       self.config = {"cameraOffset":"0.06", "lastTrMode":"1", "battChargeMin":"60", "battChargeMax":"70", \
-                     "wheelTouchSeconds":"180", "accelerationMode":"1","battPercOff":"25", "carVoltageMinEonShutdown":"11800", \
+                     "wheelTouchSeconds":"600", "accelerationMode":"1","battPercOff":"25", "carVoltageMinEonShutdown":"11800", \
                      "brakeStoppingTarget":"0.25", "tuneGernby":"1", \
                      "Kp":"-1", "Ki":"-1", "liveParams":"1", "leadDistance":"5", "deadzone":"0.0", \
                      "1barBP0":"-0.1", "1barBP1":"2.25", "2barBP0":"-0.1", "2barBP1":"2.5", "3barBP0":"0.0", \
